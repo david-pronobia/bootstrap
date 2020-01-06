@@ -11,27 +11,67 @@
     integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 
   <title>Bootstrap Containers and Rows</title>
-<style>
-  .myDiv{
-    width: 100%;
-    height: 200px;
-  }
+  <style>
+    .myDiv {
+      width: 100%;
+      height: 200px;
+      background: url('img/header.jpg') no-repeat center center;
+      background-size: cover;
+    }
 
-</style>
+    .myRow {
+      width: 100%;
+      height: 100px;
+    }
+
+    @media(min-width:576px) {body{background: cyan;}}
+    @media(min-width:786px) {body{background: lightblue;}}
+    @media(min-width:992px) {body{background: lightgreen;}}
+    @media(min-width:1200px) {body{background: yellow;}}
+  </style> 
 </head>
 
 <body>
 
-  <div cllass="myDiv bg-primary"></div>
+  <div class="myDiv bg-primary"></div>
 
-    <hr>
+  <hr>
 
-    <div class="container">
-      <div cllass="myDiv bg-primary"></div>
+  <div class="container">
+    <div class="myDiv bg-primary"></div>
+  </div>
+
+  <hr>
+
+  <div class="container-fluid">
+    <div class="myDiv bg-primary"></div>
+  </div>
+
+  <hr>
+
+  <div class="container">
+    <div class="row">
+      <div class="myRow col bg-success"></div>
+      <div class="myRow col bg-warning"></div>
+      <div class="myRow col bg-danger"></div>
     </div>
+    <div class="row">
+      <div class="myRow col bg-primary"></div>
+      <div class="myRow col bg-info"></div>
+    </div>
+  </div>
 
-  
+  <hr>
 
+  <div class="container-fluid">
+    <div class="row">
+      <div class="myRow col bg-success"></div>
+      <div class="myRow col bg-warning"></div>
+      <div class="myRow col bg-danger"></div>
+    </div>
+  </div>
+
+  <h1 class="text-center display-3 my-2">Breakpoints in Bootstrap 4</h1>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
